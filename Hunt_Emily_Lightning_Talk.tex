@@ -202,18 +202,21 @@ figure/figure1.png}
   \begin{columns}[t]
   %https://tex.stackexchange.com/a/7452/5483
   \begin{column}[c]{0.45\textwidth}
+  \begin{center}
 %http://lorempixel.com/1200/800/cats/Figure2/     
 %http://lorempixel.com/1200/800/cats/Figure3/
 \includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/logo1.png}\\
-\tiny{This is a small caption}
+figure/oTranscribe.png}\\
+\tiny{oTranscribe Web Application}
 
 \vspace{12pt}
 \includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure1.png}
-
-\tiny{This is a small caption}
+figure/output.png}\\
+\tiny{Input and Output of Shell Script}
+\end{center}
     \end{column}
+    
+    
     \begin{column}[c]{0.45\textwidth}
     \parbox{\linewidth}{
     
@@ -313,6 +316,13 @@ Creative commons attribution
 \mysection{major}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable} %%Eine Folie
+\begin{center}
+  \vspace{-0.5cm}
+\textbf{Automated Testing}\\
+\vspace{2pt}
+\footnotesize{Requires the installation of \href{https://github.com/bats-core/bats-core}{bats-core}}\\
+\end{center}
+
  \begin{columns}[t]
   %https://tex.stackexchange.com/a/7452/5483
   
@@ -321,15 +331,17 @@ Creative commons attribution
       \begin{column}[c]{0.45\textwidth}
     {
     
-\includegraphics[width=1\textwidth,height=0.5\textheight]{%
-figure/logo1.png}\\
+\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
+figure/test.png}\\
 
-\vspace{20pt}
+\vspace{2pt}
 
 \begin{center}
-
-This test was designed to ensure
-
+\tiny{
+Ensures there is only one txt file in the Data folder for the script to be run on.\\
+Usage: with Film Name as the working directory, run\\
+\texttt{/path to bats-core on your computer/bats-core/bin/bats code/test.bats}
+}
 \end{center}
 
       }
@@ -337,15 +349,17 @@ This test was designed to ensure
   
   \begin{column}[c]{0.45\textwidth}
 
-\includegraphics[width=1\textwidth,height=0.5\textheight]{%
-figure/figure1.png}
+\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
+figure/test2.png}
 
-\vspace{20pt}
+\vspace{2pt}
 
 \begin{center}
-
-This test was designed to ensure
-
+\tiny{
+Ensures there are eight txt files produced by the script in the Sorted\textunderscore Notes folder.\\
+Usage: with Film Name as the working directory, run\\
+\texttt{/path to bats-core on your computer/bats-core/bin/bats code/test2.bats}
+}
 \end{center}
       
     \end{column}
