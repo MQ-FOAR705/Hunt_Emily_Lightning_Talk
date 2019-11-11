@@ -19,6 +19,7 @@
 \usepackage{ifthen}
 %usepackage{ragged2e}sinuitsinsin
 
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -55,7 +56,7 @@
 	colorlinks=false,%
 	pdfborderstyle={/S/U/W 0},%
 	%pdfpagemode=FullScreen,%
-	pdfstartpage=4%
+	pdfstartpage=4,%
 	}
 
 % setup some fonts
@@ -112,20 +113,18 @@
     \hyperlink{abstract}{\beamerbutton{2 Minute Madness}}
     \tocbuttoncolor{radar}
     \hspace{\buttonspacingfootline}
-      \hyperlink{radar}{\beamerbutton{Section 1}}
+      \hyperlink{radar}{\beamerbutton{oTranscribe}}
 
     \tocbuttoncolor{line}
     \hspace{\buttonspacingfootline}
-      \hyperlink{line}{\beamerbutton{Section 2}}
+      \hyperlink{line}{\beamerbutton{Shell Script}}
     \tocbuttoncolor{major}
     \hspace{\buttonspacingfootline}
-      \hyperlink{major}{\beamerbutton{Section 3}}
+      \hyperlink{major}{\beamerbutton{Testing}}
     \tocbuttoncolor{slab}
     \hspace{\buttonspacingfootline}
-      \hyperlink{slab}{\beamerbutton{Section 4}}
+      \hyperlink{slab}{\beamerbutton{Results}}
     \tocbuttoncolor{minor}
-    \hspace{\buttonspacingfootline}
-      \hyperlink{minor}{\beamerbutton{Section 5}}
     \tocbuttoncolor{conclusion}
     \hspace{\buttonspacingfootline}
       \hyperlink{conclusion}{\beamerbutton{Conclusion}}
@@ -161,15 +160,20 @@
       \begin{column}[c]{0.45\textwidth}
     \parbox{\linewidth}{
     
-    \textbf{This is a test title}
+    \textbf{The Problem}
 
-\vspace{12pt}
+\vspace{1pt}
 
-      Integer dictum condimentum elit ac placerat. Duis vitae ex nec mauris iaculis maximus. Aliquam est velit, imperdiet placerat velit elementum, fringilla fringilla tortor.  
+      When taking notes on a film:  
       
-      \vspace{12pt}
+      \vspace{1pt}
       
-      Phasellus aliquam porta justo, et accumsan libero tristique quis. Aenean vel risus accumsan, feugiat lorem vel, placerat.
+      \begin{itemize}
+          \item I would provide no concrete indication of what point of the film I was referring to, requiring me to scrub through to find it.
+      \end{itemize}
+      \begin{itemize}
+          \item I would spend a lot of time searching my notes for observations on particular ideas (e.g. the use of colour).
+      \end{itemize}
       }
     \end{column}
   
@@ -180,7 +184,7 @@
 figure/logo1.png}\\
 \tiny{This is a small caption}
 
-\vspace{12pt}
+\vspace{20pt}
 \includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
 figure/figure1.png}
 
@@ -212,12 +216,17 @@ figure/figure1.png}
     \end{column}
     \begin{column}[c]{0.45\textwidth}
     \parbox{\linewidth}{
+    
+        \textbf{The Solution}
 
-      Integer dictum condimentum elit ac placerat. Duis vitae ex nec mauris iaculis maximus. Aliquam est velit, imperdiet placerat velit elementum, fringilla fringilla tortor. Nunc tempus vulputate leo, ac commodo dolor mattis ullamcorper. Donec elementum dapibus justo ut vestibulum. 
-      
-      \vspace{12pt}
-      
-      Phasellus aliquam porta justo, et accumsan libero tristique quis. Aenean vel risus accumsan, feugiat lorem vel, placerat.
+\vspace{1pt}
+
+      \begin{itemize}
+          \item \small{oTranscribe -- \textgreater{} allows you to take notes while watching a video with a timestamp. I am running the software myself on GitHub, ensuring its availability.}
+      \end{itemize}
+      \begin{itemize}
+          \item \small{A shell script to sort notes exported from oTranscribe into separate files based on their mention of the keywords: camera, character, colour, editing, lighting, narrative, sound, and/or theme.}
+      \end{itemize}
       }
     \end{column}
     
@@ -230,30 +239,31 @@ figure/figure1.png}
 \mysection{radar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable}
-  \begin{columns}[t]
-  %https://tex.stackexchange.com/a/7452/5483
-    \begin{column}[c]{0.45\textwidth}
-    \parbox{\linewidth}{
-
-      Donec dignissim vel ligula a sollicitudin. Donec rutrum faucibus dictum. Quisque in pellentesque massa. Aliquam mi lectus, facilisis sit amet dignissim vitae, porta vitae elit. Nulla nulla nunc, consectetur a blandit nec, aliquam ultrices dolor. Duis pellentesque urna ut sem lobortis maximus.
-      
-      \vspace{12pt}
-      
-	  Some extra words demonstrating a paragraph. The quick brown fox jumps over the lazy dog.
-      }
-    \end{column}
-    \begin{column}[c]{0.45\textwidth}
-%http://lorempixel.com/1200/800/cats/Figure2/     
-%http://lorempixel.com/1200/800/cats/Figure3/
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure2.png}\\
-\vspace{12pt}
-\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
-figure/figure3.png}
-    \end{column}
-  \end{columns}
-
   
+\textbf{Steps to Run oTranscribe}
+
+\begin{itemize}
+   \item I downloaded oTranscribe's \href{https://github.com/oTranscribe/oTranscribe}{GitHub Repository}.
+   \item Using the files downloaded from the repositoy, I compiled a dist folder using NPM and Node.js.
+   \item I installed Jekyll.
+   \item I copied the contents of the complied dist folder to a folder called docs and pushed this to my Hunt-Exercises repository on GitHub.
+   \item I created index.md in my repository and within this file, created a link to the docs folder. I then selected that GitHub paes run off the master branch of by repository.
+   \item This can be accessed with my entire proof of concept at \url{https://mq-foar705.github.io/Hunt-Exercises/}
+\end{itemize}  
+      
+      \hyperlink{oTranscribe_interface}{\beamerbutton{oTranscribe Interface}}\\
+
+\end{frame}
+
+\begin{frame}\label{\secvariable}
+\label{oTranscribe_interface}
+\hyperlink{slab}{\beamerbutton{\dots back to steps}}\\
+\begin{center}
+  \vspace{-0.2cm}
+  %http://lorempixel.com/1200/800/cats/Figure4/
+ \includegraphics[width=1\textwidth,height=1\textheight,keepaspectratio]{%
+  figure/oTranscribe_labels.png}
+\end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -262,19 +272,40 @@ figure/figure3.png}
 \begin{frame}\label{\secvariable}
 \begin{center}
   \vspace{-0.5cm}
-  %http://lorempixel.com/1200/800/cats/Figure4/
- \includegraphics[width=1\textwidth,height=0.75\textheight,keepaspectratio]{%
-  figure/figure4.png}
-\end{center}
-  \vspace{-0.5cm}
-  \begin{enumerate}[(a)]
-  
-  
-  \item Morbi vehicula ornare augue vitae porttitor.
-  \item Donec porttitor, nibh id pretium euismod,
-  \end{enumerate}
+\textbf{Shell Script}\\
+\vspace{2pt}
+\footnotesize{The below right is my shell script to sort a txt file exported from oTranscribe into eight separate txt files based on their mention of keywords.\\
+With the Film Name folder in a directory set up like the one in the image on the below left, run} \\
+\texttt{bash code/organise\textunderscore notes.sh data/Film\textunderscore Notes.txt}
 
-  $\quad \Rightarrow$ Aliquam et turpis eget lacus finibus congue.
+\end{center}
+
+ \begin{columns}[t]
+  %https://tex.stackexchange.com/a/7452/5483
+  
+      \begin{column}[c]{0.45\textwidth}
+
+\includegraphics[width=1\textwidth,height=2\textheight,keepaspectratio]{%
+figure/directory_structure.png}
+
+    \end{column}
+  
+  \begin{column}[c]{0.45\textwidth}
+
+\includegraphics[width=1\textwidth,height=0.5\textheight,keepaspectratio]{%
+figure/shell_script.png}
+
+
+
+    \end{column}
+    
+    
+  \end{columns}
+
+\begin{center}
+Creative commons attribution    
+\end{center}
+
   
 \end{frame}
 
@@ -282,16 +313,44 @@ figure/figure3.png}
 \mysection{major}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}\label{\secvariable} %%Eine Folie
+ \begin{columns}[t]
+  %https://tex.stackexchange.com/a/7452/5483
+  
+ 
+  
+      \begin{column}[c]{0.45\textwidth}
+    {
+    
+\includegraphics[width=1\textwidth,height=0.5\textheight]{%
+figure/logo1.png}\\
+
+\vspace{20pt}
+
 \begin{center}
-%http://lorempixel.com/1200/800/cats/Figure5/
-\includegraphics[width=1\textwidth,height=0.8\textheight,keepaspectratio]{%
-figure/figure5.png}
+
+This test was designed to ensure
+
 \end{center}
 
-    \parbox{\linewidth}{
+      }
+    \end{column}
+  
+  \begin{column}[c]{0.45\textwidth}
 
-Vivamus efficitur ac odio ac scelerisque. Sed tristique vel sapien euismod elementum. Donec eu mollis mi, et auctor est.
-}
+\includegraphics[width=1\textwidth,height=0.5\textheight]{%
+figure/figure1.png}
+
+\vspace{20pt}
+
+\begin{center}
+
+This test was designed to ensure
+
+\end{center}
+      
+    \end{column}
+    
+  \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -309,80 +368,6 @@ Etiam cursus nibh nec ex tincidunt pharetra quis vel nibh. Sed condimentum lobor
 
 \end{frame}
 
-
-
-\begin{frame}\label{slabtable}
-\begin{columns}
-\begin{column}[t]{1.1\textwidth}
-\hyperlink{slab}{\beamerbutton{\dots back to figure}}\\
-Morbi mauris turpis, ornare eu elit quis, pulvinar bibendum sapien. Nulla vel justo id dui aliquam blandit. Etiam pellentesque ac nisl ut suscipit. 
-
-
-%Table from original template.
-
-\vspace{0.3cm}
-\end{column}
-\end{columns}
-\usebeamerfont{bodytext}
- \begin{tabular}{c|rr@{}c@{}rrrrr}
- \setlength{\tabcolsep}{6mm}
-   & Time & \multicolumn{3}{r}{Volume} & Range & Length & Area & Depth \\
-   & [\si{\second}] & \multicolumn{3}{r}{[\si{\cubic\metre}]} & [\si{\metre}] &
-[\si{\metre}] & [\si{\square\metre}] & [\si{\metre}]\\\hline
-
-   \textbf{Avalanche~\#0019} & & $V_t$ &=& 29500 & & & 40411 & 0.73 \\
-   initial release &3.4& $V_0$ &=& 2188 & 2506 &  62 &  1400 & 1.56 \\
-   slab \#1 & 17.2    &  $V_1$ &=&  521 & 2356 &  39 &   701 & 0.74 \\
-   slab \#2 & 23.4    &  $V_2$ &=& 3503 & 2284 &  83 &  2753 & 1.28 \\
-   slab \#3 & 20--25$^*$ &  $V_3$ &=& 3345 & 2150 &  99 &  1880 & 1.78 \\
-   slab \#4 & 38.7    &  $V_4$ &=& 4276 & 1945 & 153 &  3657 & 1.17 \\
-   \\
-   \textbf{Avalanche~\#0017} & &  $V_t$ &=& 78500 & & & 82632 & 0.95\\
-   initial release&5.2&  $V_0$ &=& 15233 & 2402 & 191 & 12974 & 1.17\\
-   slab \#5 & 12.2    &  $V_5$ &=&  7620 & 2219 & 202 &  6043 & 1.26 \\
-   slab \#6 & 14.1    &  $V_6$ &=&  5868 & 2215 & 166 &  5851 & 1.01 \\
-   slab \#7 & 25.6    &  $V_7$ &=&  6307 & 1982 &  95 &  3320 & 1.90 \\
-   slab \#8 & 15--25$^*$ &  $V_8$ &=& 10663 & 1947 & 253 &  5037 & 2.12
- \end{tabular}
- 
-\vspace{0.2cm}
- \textbf{Table:} Release time, Volume, Location and size parameters of all
-identified slabs.
-
-\end{frame}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mysection{minor}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\label{\secvariable} %%Eine Folie
-\begin{center}
-%http://lorempixel.com/1200/800/cats/Figure7/
-\includegraphics[width=1\textwidth,height=0.7\textheight,keepaspectratio]{%
-figure/figure7.png}
-\end{center}
-\vspace{-0.2cm}
-
-Duis condimentum est id nulla dapibus semper. Maecenas in tellus eget purus egestas fringilla in vitae nisl. Nulla vulputate tempor purus ut finibus. Nunc gravida placerat tortor vel efficitur. Sed tincidunt enim sed nisl hendrerit vestibulum. 
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}\label{\secvariable}
-
-%
-\includegraphics[width=0.45\textwidth,height=1\textheight,keepaspectratio]{%
-figure/figure7.png}\hspace{.05\textwidth}
-\includegraphics[width=0.45\textwidth,height=1\textheight,keepaspectratio]{%
-figure/figure7.png}
-
-Maecenas nec accumsan nunc. Aenean pretium nulla augue, sit amet volutpat leo consectetur tincidunt. Donec scelerisque erat a semper lacinia. Pellentesque aliquet libero neque, ac consequat metus feugiat eget. Etiam aliquam maximus libero, quis hendrerit ex mattis vitae. Duis sed metus ultrices, hendrerit sapien vitae, fringilla nunc. 
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mysection{conclusion}
@@ -402,6 +387,7 @@ Surge dynamics of the 3 February 2015 avalanches in Valle\'e de la Sionne,
 \textit{J. Geophys. Res.} 
   
 \end{frame}
+
 
 
 
